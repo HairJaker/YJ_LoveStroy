@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5A1625D3FD4A423201E6983D /* libPods-YJ_LoveStroy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F35099C7632059581241EC /* libPods-YJ_LoveStroy.a */; };
+		FA72A1B01DE6D16B00365F7C /* guide_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA72A1AC1DE6D16B00365F7C /* guide_4.jpg */; };
+		FA72A1B11DE6D16B00365F7C /* guide_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA72A1AD1DE6D16B00365F7C /* guide_1.jpg */; };
+		FA72A1B21DE6D16B00365F7C /* guide_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA72A1AE1DE6D16B00365F7C /* guide_2.jpg */; };
+		FA72A1B31DE6D16B00365F7C /* guide_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA72A1AF1DE6D16B00365F7C /* guide_3.jpg */; };
+		FA72A1B61DE6D1F000365F7C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72A1B51DE6D1F000365F7C /* BaseViewController.m */; };
+		FA72A1BC1DE6D40800365F7C /* YJ_TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72A1BB1DE6D40800365F7C /* YJ_TabBarController.m */; };
 		FA8623671DE6C84E0030E51E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8623661DE6C84E0030E51E /* main.m */; };
 		FA86236A1DE6C84E0030E51E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8623691DE6C84E0030E51E /* AppDelegate.m */; };
 		FA8623701DE6C84E0030E51E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA86236E1DE6C84E0030E51E /* Main.storyboard */; };
@@ -38,6 +44,15 @@
 		66A42560C7CB97BA3A56CAB1 /* Pods-YJ_LoveStroy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YJ_LoveStroy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YJ_LoveStroy/Pods-YJ_LoveStroy.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F35099C7632059581241EC /* libPods-YJ_LoveStroy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YJ_LoveStroy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB91B2BF6B56FF76C5F558EB /* Pods-YJ_LoveStroy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YJ_LoveStroy.release.xcconfig"; path = "Pods/Target Support Files/Pods-YJ_LoveStroy/Pods-YJ_LoveStroy.release.xcconfig"; sourceTree = "<group>"; };
+		FA72A1A91DE6CCAF00365F7C /* LoveStory.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoveStory.pch; sourceTree = "<group>"; };
+		FA72A1AC1DE6D16B00365F7C /* guide_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_4.jpg; sourceTree = "<group>"; };
+		FA72A1AD1DE6D16B00365F7C /* guide_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_1.jpg; sourceTree = "<group>"; };
+		FA72A1AE1DE6D16B00365F7C /* guide_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_2.jpg; sourceTree = "<group>"; };
+		FA72A1AF1DE6D16B00365F7C /* guide_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_3.jpg; sourceTree = "<group>"; };
+		FA72A1B41DE6D1F000365F7C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		FA72A1B51DE6D1F000365F7C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		FA72A1BA1DE6D40800365F7C /* YJ_TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJ_TabBarController.h; sourceTree = "<group>"; };
+		FA72A1BB1DE6D40800365F7C /* YJ_TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJ_TabBarController.m; sourceTree = "<group>"; };
 		FA8623621DE6C84E0030E51E /* YJ_LoveStroy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJ_LoveStroy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8623661DE6C84E0030E51E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA8623681DE6C84E0030E51E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +112,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA72A1AA1DE6D14400365F7C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FA72A1AB1DE6D14D00365F7C /* guideImages */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		FA72A1AB1DE6D14D00365F7C /* guideImages */ = {
+			isa = PBXGroup;
+			children = (
+				FA72A1AC1DE6D16B00365F7C /* guide_4.jpg */,
+				FA72A1AD1DE6D16B00365F7C /* guide_1.jpg */,
+				FA72A1AE1DE6D16B00365F7C /* guide_2.jpg */,
+				FA72A1AF1DE6D16B00365F7C /* guide_3.jpg */,
+			);
+			name = guideImages;
+			sourceTree = "<group>";
+		};
 		FA8623591DE6C84D0030E51E = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +156,7 @@
 		FA8623641DE6C84E0030E51E /* YJ_LoveStroy */ = {
 			isa = PBXGroup;
 			children = (
+				FA72A1AA1DE6D14400365F7C /* Images */,
 				FA86239A1DE6C89F0030E51E /* LoginAndRegister */,
 				FA8623991DE6C88D0030E51E /* BaseController */,
 				FA8623981DE6C8790030E51E /* HomePage */,
@@ -132,6 +167,7 @@
 				FA8623731DE6C84E0030E51E /* LaunchScreen.storyboard */,
 				FA8623761DE6C84E0030E51E /* Info.plist */,
 				FA8623651DE6C84E0030E51E /* Supporting Files */,
+				FA72A1A91DE6CCAF00365F7C /* LoveStory.pch */,
 			);
 			path = YJ_LoveStroy;
 			sourceTree = "<group>";
@@ -165,6 +201,8 @@
 		FA8623981DE6C8790030E51E /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				FA72A1BA1DE6D40800365F7C /* YJ_TabBarController.h */,
+				FA72A1BB1DE6D40800365F7C /* YJ_TabBarController.m */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -172,6 +210,8 @@
 		FA8623991DE6C88D0030E51E /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
+				FA72A1B41DE6D1F000365F7C /* BaseViewController.h */,
+				FA72A1B51DE6D1F000365F7C /* BaseViewController.m */,
 			);
 			name = BaseController;
 			sourceTree = "<group>";
@@ -248,7 +288,7 @@
 		FA86235A1DE6C84D0030E51E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = yujie;
 				TargetAttributes = {
 					FA8623611DE6C84D0030E51E = {
@@ -296,8 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8623751DE6C84E0030E51E /* LaunchScreen.storyboard in Resources */,
+				FA72A1B01DE6D16B00365F7C /* guide_4.jpg in Resources */,
+				FA72A1B31DE6D16B00365F7C /* guide_3.jpg in Resources */,
 				FA8623721DE6C84E0030E51E /* Assets.xcassets in Resources */,
 				FA8623701DE6C84E0030E51E /* Main.storyboard in Resources */,
+				FA72A1B11DE6D16B00365F7C /* guide_1.jpg in Resources */,
+				FA72A1B21DE6D16B00365F7C /* guide_2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +414,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA72A1BC1DE6D40800365F7C /* YJ_TabBarController.m in Sources */,
 				FA86236A1DE6C84E0030E51E /* AppDelegate.m in Sources */,
+				FA72A1B61DE6D1F000365F7C /* BaseViewController.m in Sources */,
 				FA8623671DE6C84E0030E51E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +490,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -466,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -492,6 +539,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -508,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -521,11 +569,15 @@
 			baseConfigurationReference = 66A42560C7CB97BA3A56CAB1 /* Pods-YJ_LoveStroy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = E2D39L8Q2Y;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YJ_LoveStroy/LoveStory.pch";
 				INFOPLIST_FILE = YJ_LoveStroy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jingcaimao.YJ-LoveStroy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -534,11 +586,15 @@
 			baseConfigurationReference = EB91B2BF6B56FF76C5F558EB /* Pods-YJ_LoveStroy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = E2D39L8Q2Y;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YJ_LoveStroy/LoveStory.pch";
 				INFOPLIST_FILE = YJ_LoveStroy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jingcaimao.YJ-LoveStroy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
