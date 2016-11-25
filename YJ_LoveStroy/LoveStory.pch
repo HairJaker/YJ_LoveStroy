@@ -13,6 +13,8 @@
 
 #define GUIDE_COUNT 4
 #define PAGECONTROL_HEIGHT 20
+#define HEAD_VIEW_HEIGHT 64
+#define CUSTOM_FONT_SIZE 15.0
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 

@@ -10,4 +10,11 @@
 
 @interface BaseViewController : UIViewController
 
+@property (nonatomic,strong) UIView * headView;
+@property (nonatomic,strong) UILabel * titleLabel;
+
+-(void)setHeadViewTitleLabelTextWith:(NSString *)text;
+
+-(void)setHeadViewHidden:(BOOL)hidden;
+
 @end

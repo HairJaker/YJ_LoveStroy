@@ -18,6 +18,43 @@
     [super viewDidLoad];
     
     [self setBackgroundColor];  // 设置渐变背景
+    
+    [self setHeadView];         // 头部视图
+    [self setTitleLabel];       // 标题
+}
+
+#pragma mark ----   头部视图  ------
+
+-(void)setHeadView
+{
+    CGRect headViewRect =  CGRectMake(0, 0, SCREEN_WIDTH, HEAD_VIEW_HEIGHT);
+    
+    _headView = [[UIView alloc]initWithFrame:headViewRect];
+    _headView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:_headView];
+}
+
+-(void)setTitleLabel
+{
+    CGRect titleLabelRect = CGRectMake(0, 0, 120, 44);
+
+    _titleLabel = [[UILabel alloc]initWithFrame:titleLabelRect];
+    _titleLabel.center = CGPointMake(CGRectGetMidX(self.view.frame), 42);
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    _titleLabel.textColor = [UIColor whiteColor];
+    _titleLabel.font = [UIFont systemFontOfSize:CUSTOM_FONT_SIZE];
+    [_headView addSubview:_titleLabel];
+
+}
+
+-(void)setHeadViewTitleLabelTextWith:(NSString *)text
+{
+    _titleLabel.text = text;
+}
+
+-(void)setHeadViewHidden:(BOOL)hidden
+{
+    _headView.hidden = hidden;
 }
 
 #pragma mark ----  添加渐变背景色  -----
