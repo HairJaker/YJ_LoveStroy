@@ -21,8 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
-//    YJ_TabBarController * homePage = [[YJ_TabBarController alloc]i];
-//    [self.window setRootViewController:homePage];
+    [UIApplication sharedApplication].statusBarStyle=UIStatusBarStyleLightContent;
+    
     [self.window makeKeyAndVisible];
     
     [self addGuideScrollViewWithFrame:self.window.bounds];
