@@ -9,7 +9,7 @@
 #ifndef LoveStory_pch
 #define LoveStory_pch
 
-//  ----- 引导页------
+//  -----   引导页  ------
 
 #define GUIDE_COUNT 4
 #define PAGECONTROL_HEIGHT 20
@@ -18,7 +18,13 @@
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+#define CURRENT_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
+//  -----  public -----
 #import "YJ_TabBarController.h"
 #import "BaseViewController.h"
+#import "YJ_CircleScrollView.h"
+#import "YJ_GuideScrollView.h"
+#import "YJ_Singlent.h"
 
 #endif /* LoveStory_pch */
