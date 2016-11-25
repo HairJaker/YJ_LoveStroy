@@ -12,7 +12,7 @@
         <!--尾页-->
         <scene sceneID="z3I-O3-KfH">
             <objects>
-                <viewController id="Pto-pA-PWi" sceneMemberID="viewController">
+                <viewController id="Pto-pA-PWi" customClass="MineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vZj-3S-xlG"/>
                         <viewControllerLayoutGuide type="bottom" id="p9N-fC-hua"/>
@@ -48,7 +48,7 @@
         <!--首页-->
         <scene sceneID="nUk-6h-hMP">
             <objects>
-                <viewController id="7YG-ul-CgM" sceneMemberID="viewController">
+                <viewController id="7YG-ul-CgM" customClass="HomePageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YVZ-XG-BXh"/>
                         <viewControllerLayoutGuide type="bottom" id="Jad-CV-NB3"/>
@@ -56,7 +56,6 @@
                     <view key="view" contentMode="scaleToFill" id="YDB-X1-ISf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.022757379519999999" green="1" blue="0.83880120079999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="首页" image="tab_first_normal" selectedImage="tab_first_highlight" id="WU3-WL-aJx"/>
                 </viewController>

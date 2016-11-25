@@ -14,6 +14,8 @@
 		FA72A1B31DE6D16B00365F7C /* guide_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA72A1AF1DE6D16B00365F7C /* guide_3.jpg */; };
 		FA72A1B61DE6D1F000365F7C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72A1B51DE6D1F000365F7C /* BaseViewController.m */; };
 		FA72A1BC1DE6D40800365F7C /* YJ_TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72A1BB1DE6D40800365F7C /* YJ_TabBarController.m */; };
+		FA72A1BF1DE6F4CD00365F7C /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72A1BE1DE6F4CD00365F7C /* HomePageViewController.m */; };
+		FA72A1C21DE6F4DD00365F7C /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA72A1C11DE6F4DD00365F7C /* MineViewController.m */; };
 		FA8623671DE6C84E0030E51E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8623661DE6C84E0030E51E /* main.m */; };
 		FA86236A1DE6C84E0030E51E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8623691DE6C84E0030E51E /* AppDelegate.m */; };
 		FA8623701DE6C84E0030E51E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA86236E1DE6C84E0030E51E /* Main.storyboard */; };
@@ -53,6 +55,10 @@
 		FA72A1B51DE6D1F000365F7C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		FA72A1BA1DE6D40800365F7C /* YJ_TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJ_TabBarController.h; sourceTree = "<group>"; };
 		FA72A1BB1DE6D40800365F7C /* YJ_TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJ_TabBarController.m; sourceTree = "<group>"; };
+		FA72A1BD1DE6F4CD00365F7C /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		FA72A1BE1DE6F4CD00365F7C /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		FA72A1C01DE6F4DD00365F7C /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		FA72A1C11DE6F4DD00365F7C /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		FA8623621DE6C84E0030E51E /* YJ_LoveStroy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJ_LoveStroy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8623661DE6C84E0030E51E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA8623681DE6C84E0030E51E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -203,6 +209,10 @@
 			children = (
 				FA72A1BA1DE6D40800365F7C /* YJ_TabBarController.h */,
 				FA72A1BB1DE6D40800365F7C /* YJ_TabBarController.m */,
+				FA72A1BD1DE6F4CD00365F7C /* HomePageViewController.h */,
+				FA72A1BE1DE6F4CD00365F7C /* HomePageViewController.m */,
+				FA72A1C01DE6F4DD00365F7C /* MineViewController.h */,
+				FA72A1C11DE6F4DD00365F7C /* MineViewController.m */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -416,6 +426,8 @@
 			files = (
 				FA72A1BC1DE6D40800365F7C /* YJ_TabBarController.m in Sources */,
 				FA86236A1DE6C84E0030E51E /* AppDelegate.m in Sources */,
+				FA72A1BF1DE6F4CD00365F7C /* HomePageViewController.m in Sources */,
+				FA72A1C21DE6F4DD00365F7C /* MineViewController.m in Sources */,
 				FA72A1B61DE6D1F000365F7C /* BaseViewController.m in Sources */,
 				FA8623671DE6C84E0030E51E /* main.m in Sources */,
 			);
