@@ -19,8 +19,6 @@
     
     [self changeTabBarItem];
     
-//    [self setHeadView];
-    
 }
 
 #pragma mark -  更改 tabBar item ----
@@ -45,17 +43,6 @@
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        titleHighlightedColor, NSForegroundColorAttributeName,
                                                        nil] forState:UIControlStateSelected];
-}
-
-#pragma mark --  导航栏 --
-
--(void)setHeadView
-{
-    CGRect headViewRect = CGRectMake(0, 0, SCREEN_WIDTH, HEAD_VIEW_HEIGHT);
-    
-    UIView * headView = [[UIView alloc]initWithFrame:headViewRect];
-    headView.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:headView];
 }
 
 - (void)didReceiveMemoryWarning {
