@@ -33,6 +33,8 @@
 		FAC3C7C71DE80573003D97B6 /* circle_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAC3C7C41DE80573003D97B6 /* circle_5.jpg */; };
 		FAC3C7CA1DE810A1003D97B6 /* YJ_CircleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC3C7C91DE810A1003D97B6 /* YJ_CircleScrollView.m */; };
 		FAC3C7CF1DE812A9003D97B6 /* YJ_GuideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC3C7CE1DE812A9003D97B6 /* YJ_GuideScrollView.m */; };
+		FADF6E651DF535760065DC69 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF6E631DF535760065DC69 /* CustomCollectionViewCell.m */; };
+		FADF6E661DF535760065DC69 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADF6E641DF535760065DC69 /* CustomCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,9 @@
 		FAC3C7C91DE810A1003D97B6 /* YJ_CircleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJ_CircleScrollView.m; sourceTree = "<group>"; };
 		FAC3C7CD1DE812A9003D97B6 /* YJ_GuideScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJ_GuideScrollView.h; sourceTree = "<group>"; };
 		FAC3C7CE1DE812A9003D97B6 /* YJ_GuideScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJ_GuideScrollView.m; sourceTree = "<group>"; };
+		FADF6E621DF535760065DC69 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		FADF6E631DF535760065DC69 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		FADF6E641DF535760065DC69 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +327,9 @@
 		FAC3C7AC1DE7E409003D97B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FADF6E621DF535760065DC69 /* CustomCollectionViewCell.h */,
+				FADF6E631DF535760065DC69 /* CustomCollectionViewCell.m */,
+				FADF6E641DF535760065DC69 /* CustomCollectionViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -518,6 +526,7 @@
 				FAC3C7C01DE80543003D97B6 /* circle_1.jpg in Resources */,
 				FA72A1B11DE6D16B00365F7C /* guide_1.jpg in Resources */,
 				FA72A1B21DE6D16B00365F7C /* guide_2.jpg in Resources */,
+				FADF6E661DF535760065DC69 /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +603,7 @@
 				FA86236A1DE6C84E0030E51E /* AppDelegate.m in Sources */,
 				FAC3C7CA1DE810A1003D97B6 /* YJ_CircleScrollView.m in Sources */,
 				FAC3C7CF1DE812A9003D97B6 /* YJ_GuideScrollView.m in Sources */,
+				FADF6E651DF535760065DC69 /* CustomCollectionViewCell.m in Sources */,
 				FAC3C7A51DE7E103003D97B6 /* YJ_UserManager.m in Sources */,
 				FA72A1BF1DE6F4CD00365F7C /* HomePageViewController.m in Sources */,
 				FA72A1C21DE6F4DD00365F7C /* MineViewController.m in Sources */,

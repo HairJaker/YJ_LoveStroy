@@ -27,4 +27,6 @@
 #import "YJ_GuideScrollView.h"
 #import "YJ_Singlent.h"
 
+#import "CustomCollectionViewCell.h"
+
 #endif /* LoveStory_pch */
