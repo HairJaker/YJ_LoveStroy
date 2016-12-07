@@ -28,5 +28,6 @@
 #import "YJ_Singlent.h"
 
 #import "CustomCollectionViewCell.h"
+#import "CustomMenuView.h"
 
 #endif /* LoveStory_pch */

@@ -17,4 +17,10 @@
 
 -(void)setHeadViewHidden:(BOOL)hidden;
 
+-(void)setItemWithTitle:(NSString *)title isToRight:(BOOL)isRight image:(UIImage *)image;
+
+-(void)rightAction:(UIButton *)sender;
+
+-(void)leftAction:(UIButton *)sender;
+
 @end

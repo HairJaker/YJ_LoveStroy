@@ -35,6 +35,7 @@
 		FAC3C7CF1DE812A9003D97B6 /* YJ_GuideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC3C7CE1DE812A9003D97B6 /* YJ_GuideScrollView.m */; };
 		FADF6E651DF535760065DC69 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF6E631DF535760065DC69 /* CustomCollectionViewCell.m */; };
 		FADF6E661DF535760065DC69 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADF6E641DF535760065DC69 /* CustomCollectionViewCell.xib */; };
+		FADF6E691DF5686A0065DC69 /* CustomMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF6E681DF5686A0065DC69 /* CustomMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		FADF6E621DF535760065DC69 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		FADF6E631DF535760065DC69 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		FADF6E641DF535760065DC69 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		FADF6E671DF5686A0065DC69 /* CustomMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMenuView.h; sourceTree = "<group>"; };
+		FADF6E681DF5686A0065DC69 /* CustomMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +387,7 @@
 		FAC3C7CB1DE81226003D97B6 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				FADF6E6A1DF568710065DC69 /* MenuView */,
 				FAC3C7CC1DE81242003D97B6 /* GuideScrollView */,
 				FAC3C7B31DE7EC26003D97B6 /* CircleScrollView */,
 				FAC3C7AF1DE7E449003D97B6 /* Category */,
@@ -399,6 +403,15 @@
 				FAC3C7CE1DE812A9003D97B6 /* YJ_GuideScrollView.m */,
 			);
 			name = GuideScrollView;
+			sourceTree = "<group>";
+		};
+		FADF6E6A1DF568710065DC69 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				FADF6E671DF5686A0065DC69 /* CustomMenuView.h */,
+				FADF6E681DF5686A0065DC69 /* CustomMenuView.m */,
+			);
+			name = MenuView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -605,6 +618,7 @@
 				FAC3C7CF1DE812A9003D97B6 /* YJ_GuideScrollView.m in Sources */,
 				FADF6E651DF535760065DC69 /* CustomCollectionViewCell.m in Sources */,
 				FAC3C7A51DE7E103003D97B6 /* YJ_UserManager.m in Sources */,
+				FADF6E691DF5686A0065DC69 /* CustomMenuView.m in Sources */,
 				FA72A1BF1DE6F4CD00365F7C /* HomePageViewController.m in Sources */,
 				FA72A1C21DE6F4DD00365F7C /* MineViewController.m in Sources */,
 				FA72A1B61DE6D1F000365F7C /* BaseViewController.m in Sources */,
