@@ -21,18 +21,26 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngL-RZ-JEq">
                         <rect key="frame" x="0.0" y="0.0" width="153" height="126"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_0.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aJq-ZP-am1">
-                                <rect key="frame" x="0.0" y="0.0" width="153" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="WKL-sR-O3E"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aJq-ZP-am1">
+                                <rect key="frame" x="0.0" y="0.0" width="153" height="96"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新东方学校" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQu-hM-fKX">
+                                <rect key="frame" x="0.0" y="96" width="153" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aJq-ZP-am1" firstAttribute="leading" secondItem="ngL-RZ-JEq" secondAttribute="leading" id="3L0-oJ-7Nb"/>
+                            <constraint firstItem="lQu-hM-fKX" firstAttribute="top" secondItem="aJq-ZP-am1" secondAttribute="bottom" id="5vG-fD-ugp"/>
                             <constraint firstItem="aJq-ZP-am1" firstAttribute="top" secondItem="ngL-RZ-JEq" secondAttribute="top" id="CBW-Mc-B1W"/>
                             <constraint firstAttribute="trailing" secondItem="aJq-ZP-am1" secondAttribute="trailing" id="DBq-dc-Jb8"/>
+                            <constraint firstItem="lQu-hM-fKX" firstAttribute="leading" secondItem="ngL-RZ-JEq" secondAttribute="leading" id="UAv-j8-Aae"/>
+                            <constraint firstAttribute="bottom" secondItem="lQu-hM-fKX" secondAttribute="bottom" id="hi6-JV-ZJV"/>
+                            <constraint firstAttribute="trailing" secondItem="lQu-hM-fKX" secondAttribute="trailing" id="mlr-9e-9I2"/>
+                            <constraint firstAttribute="bottom" secondItem="aJq-ZP-am1" secondAttribute="bottom" constant="30" id="ybV-WC-Gjb"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -49,6 +57,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="circle_0.jpg" width="1080" height="295"/>
+        <image name="circle_2.jpg" width="1080" height="295"/>
     </resources>
 </document>

@@ -57,6 +57,54 @@
     _headView.hidden = hidden;
 }
 
+-(void)setItemWithTitle:(NSString *)title isToRight:(BOOL)isRight image:(UIImage *)image
+{
+    NSArray * titles = [title componentsSeparatedByString:@","];
+    CGRect  frame = CGRectZero;
+    
+    if (isRight) {
+        
+        for (int i = 0; i < titles.count; i ++) {
+            
+            frame = CGRectMake(SCREEN_WIDTH - 10 - (HEAD_VIEW_HEIGHT - 20 + 10)*(i + 1), 20, HEAD_VIEW_HEIGHT - 20, HEAD_VIEW_HEIGHT - 20);
+            
+            UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            btn.frame = frame;
+            [btn setImage:image forState:UIControlStateNormal];
+            [btn setTitle:[titles objectAtIndex:i] forState:UIControlStateNormal];
+            btn.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+            btn.tag = 600+i;
+            [btn addTarget:self action:@selector(rightAction:) forControlEvents:UIControlEventTouchUpInside];
+            [_headView addSubview:btn];
+        }
+        
+    }else{
+        for (int i = 0; i < titles.count; i ++) {
+        
+        frame = CGRectMake(10 + (HEAD_VIEW_HEIGHT - 20 + 10)*i, 20, HEAD_VIEW_HEIGHT - 20, HEAD_VIEW_HEIGHT - 20);
+        
+        UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = frame;
+        [btn setImage:image forState:UIControlStateNormal];
+        btn.tag = 600 + i;
+        [btn setTitle:[titles objectAtIndex:i] forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:15.0f];
+        [btn addTarget:self action:@selector(leftAction:) forControlEvents:UIControlEventTouchUpInside];
+        [_headView addSubview:btn];
+    }
+   }
+}
+
+-(void)rightAction:(UIButton*)sender
+{
+    
+}
+
+-(void)leftAction:(UIButton*)sender
+{
+    
+}
+
 #pragma mark ----  添加渐变背景色  -----
 
 -(void)setBackgroundColor

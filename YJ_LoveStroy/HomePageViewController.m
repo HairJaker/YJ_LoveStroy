@@ -22,6 +22,8 @@ static NSString *const footerId = @"footerId";
 
 @property (nonatomic,strong) UICollectionView * homeCollectionView;
 
+@property (nonatomic,strong) CustomMenuView * menuView;
+
 @end
 
 @implementation HomePageViewController
@@ -34,9 +36,12 @@ static NSString *const footerId = @"footerId";
     
     [self showCircleScrollView];
     
-//    [self addTableView];
+    [self setItemWithTitle:@"筛选" isToRight:YES image:nil];
+    [self setItemWithTitle:@"帮助" isToRight:NO image:nil];
     
+    [self addTableView];
     [self addCollectionView];
+    [self addMenuView];
 }
 
 #pragma mark  -   轮播图视图 --
@@ -64,7 +69,7 @@ static NSString *const footerId = @"footerId";
     CGRect  tableViewRect = CGRectMake(0, HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - (HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT));
     
     _homeTableView = [[UITableView alloc]initWithFrame:tableViewRect];
-    
+    _homeTableView.hidden = YES;
     _homeTableView.dataSource = self;
     _homeTableView.delegate = self;
     [self.view addSubview:_homeTableView];
@@ -103,9 +108,9 @@ static NSString *const footerId = @"footerId";
     CGRect  collectionViewRect = CGRectMake(0, HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - (HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT + 44));
     
     _homeCollectionView = [[UICollectionView alloc]initWithFrame:collectionViewRect collectionViewLayout:collectionViewLayout];
-    _homeCollectionView.backgroundColor = [UIColor redColor];
     _homeCollectionView.dataSource = self;
     _homeCollectionView.delegate = self;
+    _homeCollectionView.hidden = NO;
     [self.view addSubview:_homeCollectionView];
     
     // 注册cell、sectionHeader、sectionFooter
@@ -124,29 +129,11 @@ static NSString *const footerId = @"footerId";
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-//    switch (section) {
-//        case 0:
-//            return 3;
-//            break;
-//        case 1:
-//            return 4;
-//            break;
-//        case 2:
-//            return 7;
-//            break;
-//        default:
-//            break;
-//    }
     return 16;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-//    CustomCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
-//    
-//    UINib * nib = [UINib nibWithNibName:NSStringFromClass([CustomCollectionViewCell class]) bundle:nil];
-//    [collectionView registerNib:nib forCellWithReuseIdentifier:cellId];
-//    cell.backgroundColor = [UIColor grayColor];
     BOOL nibsRegistered = NO;
     if (!nibsRegistered) {
         UINib *nib = [UINib nibWithNibName:NSStringFromClass([CustomCollectionViewCell class]) bundle:nil];
@@ -196,6 +183,45 @@ static NSString *const footerId = @"footerId";
     return (CGSize){SCREEN_WIDTH,0};
 }
 
+#pragma mark  --   navigation item action  --
+
+-(void)addMenuView{
+    NSArray * menuTitlesArray  = @[@"高手推荐",@"竞彩赔率",@"列表",@"集合"];
+    CGRect menuRect  = CGRectMake(SCREEN_WIDTH - 20 * menuTitlesArray.count - 10, HEAD_VIEW_HEIGHT, 20 * menuTitlesArray.count, 0);
+    
+    _menuView = [[CustomMenuView alloc]initWithFrame:menuRect withItemsTitle:menuTitlesArray];
+    _menuView.hidden = YES;
+    [self.view addSubview:_menuView];
+}
+
+-(void)rightAction:(UIButton *)sender
+{
+    CGRect __block rect  = _menuView.frame;
+
+    [UIView animateWithDuration:0.2 animations:^{
+     
+        if (_menuView.hidden) {
+            
+            _menuView.hidden = NO;
+            rect.size.height += 80;
+           
+        }else {
+            
+            rect.size.height -= 80;
+            _menuView.hidden = YES;
+            
+        }
+        
+         _menuView.frame = rect;
+        
+        [_menuView reloadItmesFrameWithFrame:_menuView.frame];
+        
+    } completion:^(BOOL finished) {
+        
+//        _menuView.hidden = !_menuView.hidden;
+        
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
