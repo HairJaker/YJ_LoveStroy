@@ -29,5 +29,8 @@
 
 #import "CustomCollectionViewCell.h"
 #import "CustomMenuView.h"
+#import "HomePageViewController.h"
+#import "MineViewController.h"
+#import "YJ_HomePageCell.h"
 
 #endif /* LoveStory_pch */

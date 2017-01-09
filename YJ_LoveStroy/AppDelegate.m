@@ -31,6 +31,8 @@
        [self addGuideScrollViewWithFrame:self.window.bounds];
     }
     
+    [self showTabbarController];
+    
     return YES;
 }
 
@@ -40,6 +42,16 @@
     
     YJ_GuideScrollView * guideVeiw = [[YJ_GuideScrollView alloc]initWithFrame:frame];
     [self.window addSubview:guideVeiw];
+    
+}
+
+-(void)showTabbarController
+{
+    YJ_TabBarController *  tab = [[YJ_TabBarController alloc]init];
+
+    UINavigationController * baseNavigationController = [[UINavigationController alloc]initWithRootViewController:tab];
+    baseNavigationController.navigationBarHidden = YES;
+    [self.window setRootViewController:baseNavigationController];
     
 }
 

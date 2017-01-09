@@ -82,9 +82,7 @@
     _scrollView.scrollEnabled = YES;
     _scrollView.pagingEnabled = YES;
     _scrollView.delegate = self;
-    
     _scrollView.contentSize = CGSizeMake(selfWidth * CIRCLE_COUNT, selfHeight);
-    
     [_scrollView setContentOffset:CGPointMake(selfWidth, 0)]; //  设置当前显示位置为中间
     
     //去掉滚动条
@@ -122,7 +120,7 @@
     //注意此方法可以根据页数返回UIPageControl合适的大小
     CGSize size= [_pageControl sizeForNumberOfPages:_imagesCount];
     _pageControl.bounds=CGRectMake(0, 0, size.width, size.height);
-    _pageControl.center=CGPointMake(selfWidth/2,selfHeight - 30);
+    _pageControl.center=CGPointMake(selfWidth/2,selfHeight - 20);
     //设置颜色
     _pageControl.pageIndicatorTintColor=[UIColor colorWithRed:193/255.0 green:219/255.0 blue:249/255.0 alpha:1];
     //设置当前页颜色

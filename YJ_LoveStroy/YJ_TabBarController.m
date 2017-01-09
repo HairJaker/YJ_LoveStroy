@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self addViewControllers];
     [self changeTabBarItem];
     
 }
@@ -28,11 +29,15 @@
     self.tabBar.barTintColor = [UIColor blackColor];
     
     NSArray * tabSelectImages = @[[UIImage imageNamed:@"tab_first_highlight"],[UIImage imageNamed:@"tab_last_highlight"]];
+    NSArray * tabNormalImages = @[[UIImage imageNamed:@"tab_first_normal"],[UIImage imageNamed:@"tab_last_normal"]];
+    NSArray * itemTexts = @[@"首页",@"我的"];
     
     for (int i = 0; i < tabSelectImages.count; i ++) {
         UITabBarItem * tabBarItem = [self.tabBar.items objectAtIndex:i];
         UIImage * image = [tabSelectImages objectAtIndex:i];
         image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        tabBarItem.image = [tabNormalImages objectAtIndex:i];
+        tabBarItem.title = [itemTexts objectAtIndex:i];
         tabBarItem.selectedImage = image;
     }
     
@@ -43,6 +48,30 @@
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        titleHighlightedColor, NSForegroundColorAttributeName,
                                                        nil] forState:UIControlStateSelected];
+}
+
+-(void)addViewControllers{
+
+    NSMutableArray * controllerArray = [[NSMutableArray alloc]init];
+
+    NSArray * controllerNameArray = [NSArray arrayWithObjects:@"HomePageViewController",@"MineViewController",nil];
+    
+    for (int i = 0; i<controllerNameArray.count; i++) {
+        
+        NSString * className = controllerNameArray[i];
+        
+        Class  NewClass = NSClassFromString(className);
+
+        if (NewClass) {
+            BaseViewController * nowVC = [[NewClass alloc] init];
+            UINavigationController * naviVC = [[UINavigationController alloc]initWithRootViewController:nowVC];
+            naviVC.navigationBarHidden = YES;
+            [controllerArray addObject:naviVC];
+        }
+    }
+    
+    self.viewControllers = controllerArray;
+    
 }
 
 - (void)didReceiveMemoryWarning {

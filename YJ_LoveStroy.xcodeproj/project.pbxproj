@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5A1625D3FD4A423201E6983D /* libPods-YJ_LoveStroy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F35099C7632059581241EC /* libPods-YJ_LoveStroy.a */; };
+		FA113C241E07910D002B94D6 /* UMSocial in Resources */ = {isa = PBXBuildFile; fileRef = FA113C231E07910D002B94D6 /* UMSocial */; };
+		FA113C261E07917D002B94D6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA113C251E07917D002B94D6 /* libsqlite3.tbd */; };
+		FA113C281E07919D002B94D6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA113C271E07919D002B94D6 /* SystemConfiguration.framework */; };
+		FA113C2A1E0791A9002B94D6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA113C291E0791A9002B94D6 /* CoreTelephony.framework */; };
+		FA113C2C1E0791B2002B94D6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA113C2B1E0791B2002B94D6 /* ImageIO.framework */; };
+		FA113C2E1E0791BB002B94D6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA113C2D1E0791BB002B94D6 /* libz.tbd */; };
+		FA113C301E0791D0002B94D6 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA113C2F1E0791D0002B94D6 /* libc++.tbd */; };
+		FA1D2C8E1DF93C0700267053 /* YJ_HomePageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1D2C8C1DF93C0700267053 /* YJ_HomePageCell.m */; };
+		FA1D2C8F1DF93C0700267053 /* YJ_HomePageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1D2C8D1DF93C0700267053 /* YJ_HomePageCell.xib */; };
 		FA72A1B01DE6D16B00365F7C /* guide_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA72A1AC1DE6D16B00365F7C /* guide_4.jpg */; };
 		FA72A1B11DE6D16B00365F7C /* guide_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA72A1AD1DE6D16B00365F7C /* guide_1.jpg */; };
 		FA72A1B21DE6D16B00365F7C /* guide_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA72A1AE1DE6D16B00365F7C /* guide_2.jpg */; };
@@ -59,6 +68,16 @@
 		66A42560C7CB97BA3A56CAB1 /* Pods-YJ_LoveStroy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YJ_LoveStroy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YJ_LoveStroy/Pods-YJ_LoveStroy.debug.xcconfig"; sourceTree = "<group>"; };
 		A8F35099C7632059581241EC /* libPods-YJ_LoveStroy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YJ_LoveStroy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB91B2BF6B56FF76C5F558EB /* Pods-YJ_LoveStroy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YJ_LoveStroy.release.xcconfig"; path = "Pods/Target Support Files/Pods-YJ_LoveStroy/Pods-YJ_LoveStroy.release.xcconfig"; sourceTree = "<group>"; };
+		FA113C231E07910D002B94D6 /* UMSocial */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UMSocial; sourceTree = "<group>"; };
+		FA113C251E07917D002B94D6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FA113C271E07919D002B94D6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FA113C291E0791A9002B94D6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		FA113C2B1E0791B2002B94D6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		FA113C2D1E0791BB002B94D6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FA113C2F1E0791D0002B94D6 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		FA1D2C8B1DF93C0700267053 /* YJ_HomePageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJ_HomePageCell.h; sourceTree = "<group>"; };
+		FA1D2C8C1DF93C0700267053 /* YJ_HomePageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJ_HomePageCell.m; sourceTree = "<group>"; };
+		FA1D2C8D1DF93C0700267053 /* YJ_HomePageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YJ_HomePageCell.xib; sourceTree = "<group>"; };
 		FA72A1A91DE6CCAF00365F7C /* LoveStory.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoveStory.pch; sourceTree = "<group>"; };
 		FA72A1AC1DE6D16B00365F7C /* guide_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_4.jpg; sourceTree = "<group>"; };
 		FA72A1AD1DE6D16B00365F7C /* guide_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide_1.jpg; sourceTree = "<group>"; };
@@ -113,6 +132,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA113C301E0791D0002B94D6 /* libc++.tbd in Frameworks */,
+				FA113C2E1E0791BB002B94D6 /* libz.tbd in Frameworks */,
+				FA113C2C1E0791B2002B94D6 /* ImageIO.framework in Frameworks */,
+				FA113C2A1E0791A9002B94D6 /* CoreTelephony.framework in Frameworks */,
+				FA113C281E07919D002B94D6 /* SystemConfiguration.framework in Frameworks */,
+				FA113C261E07917D002B94D6 /* libsqlite3.tbd in Frameworks */,
 				5A1625D3FD4A423201E6983D /* libPods-YJ_LoveStroy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +162,12 @@
 		97B486747362550310ACD4EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA113C2F1E0791D0002B94D6 /* libc++.tbd */,
+				FA113C2D1E0791BB002B94D6 /* libz.tbd */,
+				FA113C2B1E0791B2002B94D6 /* ImageIO.framework */,
+				FA113C291E0791A9002B94D6 /* CoreTelephony.framework */,
+				FA113C271E07919D002B94D6 /* SystemConfiguration.framework */,
+				FA113C251E07917D002B94D6 /* libsqlite3.tbd */,
 				A8F35099C7632059581241EC /* libPods-YJ_LoveStroy.a */,
 			);
 			name = Frameworks;
@@ -149,6 +180,14 @@
 				EB91B2BF6B56FF76C5F558EB /* Pods-YJ_LoveStroy.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA113C221E0790EF002B94D6 /* U-meng */ = {
+			isa = PBXGroup;
+			children = (
+				FA113C231E07910D002B94D6 /* UMSocial */,
+			);
+			name = "U-meng";
 			sourceTree = "<group>";
 		};
 		FA72A1AA1DE6D14400365F7C /* Images */ = {
@@ -196,6 +235,7 @@
 		FA8623641DE6C84E0030E51E /* YJ_LoveStroy */ = {
 			isa = PBXGroup;
 			children = (
+				FA113C221E0790EF002B94D6 /* U-meng */,
 				FAC3C7CB1DE81226003D97B6 /* CustomView */,
 				FA72A1AA1DE6D14400365F7C /* Images */,
 				FA86239A1DE6C89F0030E51E /* LoginAndRegister */,
@@ -333,6 +373,9 @@
 				FADF6E621DF535760065DC69 /* CustomCollectionViewCell.h */,
 				FADF6E631DF535760065DC69 /* CustomCollectionViewCell.m */,
 				FADF6E641DF535760065DC69 /* CustomCollectionViewCell.xib */,
+				FA1D2C8B1DF93C0700267053 /* YJ_HomePageCell.h */,
+				FA1D2C8C1DF93C0700267053 /* YJ_HomePageCell.m */,
+				FA1D2C8D1DF93C0700267053 /* YJ_HomePageCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -531,6 +574,7 @@
 				FA8623751DE6C84E0030E51E /* LaunchScreen.storyboard in Resources */,
 				FA72A1B01DE6D16B00365F7C /* guide_4.jpg in Resources */,
 				FA72A1B31DE6D16B00365F7C /* guide_3.jpg in Resources */,
+				FA113C241E07910D002B94D6 /* UMSocial in Resources */,
 				FAC3C7C51DE80573003D97B6 /* circle_3.jpg in Resources */,
 				FA8623721DE6C84E0030E51E /* Assets.xcassets in Resources */,
 				FAC3C7BF1DE80543003D97B6 /* circle_0.jpg in Resources */,
@@ -540,6 +584,7 @@
 				FA72A1B11DE6D16B00365F7C /* guide_1.jpg in Resources */,
 				FA72A1B21DE6D16B00365F7C /* guide_2.jpg in Resources */,
 				FADF6E661DF535760065DC69 /* CustomCollectionViewCell.xib in Resources */,
+				FA1D2C8F1DF93C0700267053 /* YJ_HomePageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +660,7 @@
 				FA72A1BC1DE6D40800365F7C /* YJ_TabBarController.m in Sources */,
 				FA86236A1DE6C84E0030E51E /* AppDelegate.m in Sources */,
 				FAC3C7CA1DE810A1003D97B6 /* YJ_CircleScrollView.m in Sources */,
+				FA1D2C8E1DF93C0700267053 /* YJ_HomePageCell.m in Sources */,
 				FAC3C7CF1DE812A9003D97B6 /* YJ_GuideScrollView.m in Sources */,
 				FADF6E651DF535760065DC69 /* CustomCollectionViewCell.m in Sources */,
 				FAC3C7A51DE7E103003D97B6 /* YJ_UserManager.m in Sources */,

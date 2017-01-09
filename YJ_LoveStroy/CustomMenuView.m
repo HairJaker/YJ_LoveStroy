@@ -22,7 +22,7 @@
     
     if (self) {
         _items = [NSMutableArray array];
-        self.backgroundColor = [UIColor grayColor];
+        self.backgroundColor = [UIColor blackColor];
         [self creatMenuItemsWithFrame:frame andTitles:titles];
     }
     return self;
@@ -38,8 +38,9 @@
         if (i == 0) {
             menuButton.selected = YES;
         }
-        [menuButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-        [menuButton setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+        menuButton.tag = i;
+        [menuButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [menuButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
         [menuButton addTarget:self action:@selector(menuChooseAction:) forControlEvents:UIControlEventTouchUpInside];
         [_items addObject:menuButton];
         [self addSubview:menuButton];
@@ -48,7 +49,7 @@
 
 -(void)menuChooseAction:(UIButton *)sender
 {
-    
+    _menuChooseBlock((int)sender.tag);
 }
 
 -(void)reloadItmesFrameWithFrame:(CGRect)frame{
