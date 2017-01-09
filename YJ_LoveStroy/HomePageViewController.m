@@ -8,6 +8,7 @@
 
 #define CIRCLE_SCROLL_VIEW_HEIGHT 150
 #define ALL_CIRCLE_COUNT 6
+#define TABLE_HEAD_VIEW_HEIGHT 44
 
 #import "HomePageViewController.h"
 
@@ -66,12 +67,14 @@ static NSString *const footerId = @"footerId";
 -(void)addTableView
 {
     
-    CGRect  tableViewRect = CGRectMake(0, HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - (HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT));
+    CGRect  tableViewRect = CGRectMake(0, HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - (HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT + 50));
     
     _homeTableView = [[UITableView alloc]initWithFrame:tableViewRect];
     _homeTableView.hidden = YES;
+    _homeTableView.backgroundColor = [UIColor clearColor];
     _homeTableView.dataSource = self;
     _homeTableView.delegate = self;
+    _homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_homeTableView];
                                        
 }
@@ -80,23 +83,55 @@ static NSString *const footerId = @"footerId";
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 3;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return section == 0?3:section==1?6:section == 2?7:0;
+}
+
+#pragma mark  --  tableView delegate  ---
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return TABLE_HEAD_VIEW_HEIGHT;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView * headView = [self addHeadView];
+    return headView;
+}
+
+-(UIView *)addHeadView
+{
+    CGRect headViewRect = CGRectMake(0, 0, SCREEN_WIDTH, 30);
+    UIView * headView = [[UIView alloc]initWithFrame:headViewRect];
+    headView.backgroundColor = [UIColor blackColor];
+    return headView;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static  NSString * cellName = @"cellName";
+    static  NSString * homePageCell = @"homePageCell";
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellName];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
+    BOOL nibRegistered = NO;
+    if (!nibRegistered) {
+        UINib *nib = [UINib nibWithNibName:NSStringFromClass([YJ_HomePageCell class]) bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:homePageCell];
+        nibRegistered = YES;
     }
+    YJ_HomePageCell * cell = (YJ_HomePageCell *)[tableView dequeueReusableCellWithIdentifier:homePageCell];
+
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.backgroundColor = [UIColor clearColor];
+    
     return cell;
 }
 
@@ -105,9 +140,10 @@ static NSString *const footerId = @"footerId";
 -(void)addCollectionView{
 
     UICollectionViewFlowLayout * collectionViewLayout = [[UICollectionViewFlowLayout alloc]init];
-    CGRect  collectionViewRect = CGRectMake(0, HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - (HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT + 44));
+    CGRect  collectionViewRect = CGRectMake(0, HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - (HEAD_VIEW_HEIGHT + CIRCLE_SCROLL_VIEW_HEIGHT + 50));
     
     _homeCollectionView = [[UICollectionView alloc]initWithFrame:collectionViewRect collectionViewLayout:collectionViewLayout];
+    _homeCollectionView.backgroundColor = [UIColor clearColor];
     _homeCollectionView.dataSource = self;
     _homeCollectionView.delegate = self;
     _homeCollectionView.hidden = NO;
@@ -187,10 +223,19 @@ static NSString *const footerId = @"footerId";
 
 -(void)addMenuView{
     NSArray * menuTitlesArray  = @[@"高手推荐",@"竞彩赔率",@"列表",@"集合"];
-    CGRect menuRect  = CGRectMake(SCREEN_WIDTH - 20 * menuTitlesArray.count - 10, HEAD_VIEW_HEIGHT, 20 * menuTitlesArray.count, 0);
+    CGRect menuRect  = CGRectMake(SCREEN_WIDTH - 25 * menuTitlesArray.count - 10, HEAD_VIEW_HEIGHT, 25 * menuTitlesArray.count, 0);
     
     _menuView = [[CustomMenuView alloc]initWithFrame:menuRect withItemsTitle:menuTitlesArray];
     _menuView.hidden = YES;
+    
+    
+    __weak typeof(HomePageViewController *) weakSelf = self;
+    
+    _menuView.menuChooseBlock = ^(int index){
+    
+        [weakSelf chooseMenuActionInIndex:index];
+        
+    };
     [self.view addSubview:_menuView];
 }
 
@@ -203,11 +248,11 @@ static NSString *const footerId = @"footerId";
         if (_menuView.hidden) {
             
             _menuView.hidden = NO;
-            rect.size.height += 80;
+            rect.size.height += 100;
            
         }else {
             
-            rect.size.height -= 80;
+            rect.size.height -= 100;
             _menuView.hidden = YES;
             
         }
@@ -221,6 +266,44 @@ static NSString *const footerId = @"footerId";
 //        _menuView.hidden = !_menuView.hidden;
         
     }];
+}
+
+-(void)chooseMenuActionInIndex:(int)index
+{
+
+    CGRect __block rect  = _menuView.frame;
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        
+        rect.size.height -= 100;
+        _menuView.hidden = YES;
+
+        _menuView.frame = rect;
+        
+        [_menuView reloadItmesFrameWithFrame:_menuView.frame];
+        
+    } completion:^(BOOL finished) {
+
+    }];
+    
+    switch (index) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            _homeCollectionView.hidden = YES;
+            _homeTableView.hidden = NO;
+            break;
+        case 3:
+            _homeTableView.hidden = YES;
+            _homeCollectionView.hidden = NO;
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

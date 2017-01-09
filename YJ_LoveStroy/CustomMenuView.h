@@ -6,6 +6,8 @@
 //  Copyright © 2016年 yujie. All rights reserved.
 //
 
+typedef void(^MenuChooseBlock)(int  index);
+
 #import <UIKit/UIKit.h>
 
 @interface CustomMenuView : UIView
@@ -15,5 +17,7 @@
 -(void)menuChooseAction:(UIButton *)sender;
 
 -(void)reloadItmesFrameWithFrame:(CGRect)frame;
+
+@property (nonatomic,copy) MenuChooseBlock menuChooseBlock;
 
 @end

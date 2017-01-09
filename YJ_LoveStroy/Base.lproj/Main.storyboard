@@ -43,7 +43,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsz-pG-XVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-612" y="-737"/>
+            <point key="canvasLocation" x="-1454" y="-693"/>
         </scene>
         <!--首页-->
         <scene sceneID="nUk-6h-hMP">
@@ -66,7 +66,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="JLy-Kd-wne">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tCS-a9-7Mv" customClass="YJ_TabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tCS-a9-7Mv" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="aVa-tZ-4OU"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="gBT-qq-g36">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -80,7 +80,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grb-Eg-hnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="-704"/>
+            <point key="canvasLocation" x="-830" y="-693"/>
         </scene>
     </scenes>
     <resources>
