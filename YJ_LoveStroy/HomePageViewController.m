@@ -12,6 +12,7 @@
 
 #import "HomePageViewController.h"
 
+
 // 注意const的位置
 static NSString *const cellId = @"cellId";
 static NSString *const headerId = @"headerId";
@@ -43,6 +44,8 @@ static NSString *const footerId = @"footerId";
     [self addTableView];
     [self addCollectionView];
     [self addMenuView];
+    
+    [self prepareRefresh];
 }
 
 #pragma mark  -   轮播图视图 --
@@ -77,6 +80,48 @@ static NSString *const footerId = @"footerId";
     _homeTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_homeTableView];
                                        
+}
+
+#pragma mark --  刷新加载  --
+//自定义一个方法实现
+- (void)prepareRefresh
+{
+    NSMutableArray *headerImages = [NSMutableArray array];
+    for (int i = 0; i < 9; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh%d.tiff",i]];
+        [headerImages addObject:image];
+    }
+    MJRefreshGifHeader *gifHeader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+        //下拉刷新要做的操作.
+        
+//        [_homeTableView.mj_header endRefreshing];
+    }];
+    gifHeader.stateLabel.hidden = YES;
+    gifHeader.stateLabel.text = @"加载中...";
+    gifHeader.stateLabel.textColor = [UIColor whiteColor];
+//    gifHeader.lastUpdatedTimeLabel.hidden = YES;
+    
+    [gifHeader setImages:@[headerImages[0]] forState:MJRefreshStateIdle];
+    [gifHeader setImages:headerImages forState:MJRefreshStateRefreshing];
+    _homeTableView.mj_header = gifHeader;
+    
+    
+    NSMutableArray *footerImages = [NSMutableArray array];
+//    for (int i = 8; i >=0; i--) {
+//        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"refresh%d.tiff",i]];
+//        [footerImages addObject:image];
+//    }
+    MJRefreshAutoGifFooter *gifFooter = [MJRefreshAutoGifFooter footerWithRefreshingBlock:^{
+        //上拉加载需要做的操作.
+        
+//        [_homeTableView.mj_footer endRefreshing];
+    }];
+    
+    gifFooter.stateLabel.hidden = YES;
+    gifFooter.refreshingTitleHidden = YES;
+//    [gifFooter setImages:@[footerImages[0]] forState:MJRefreshStateIdle];
+//    [gifFooter setImages:footerImages forState:MJRefreshStateRefreshing];
+    _homeTableView.mj_footer = gifFooter;
 }
 
 #pragma mark -  tableView dataSource -----
@@ -133,6 +178,13 @@ static NSString *const footerId = @"footerId";
     cell.backgroundColor = [UIColor clearColor];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YJ_ContainerViewController * containerVC = [[YJ_ContainerViewController alloc]init];
+    containerVC.currentSelectedIndex = 1;
+    [self.navigationController pushViewController:containerVC animated:YES];
 }
 
 #pragma mark  --  add collection view  --
@@ -304,6 +356,11 @@ static NSString *const footerId = @"footerId";
         default:
             break;
     }
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+  
 }
 
 - (void)didReceiveMemoryWarning {

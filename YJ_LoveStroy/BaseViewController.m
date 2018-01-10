@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setBackgroundColor];  // 设置渐变背景
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage getBackGroundColorWithView:self.view withColors:@[[UIColor blackColor],[UIColor colorWithRed:125/255.0f green:125/255.0f blue:125/255.0f alpha:1.0f]]]]];  // 设置渐变背景
     
     [self setHeadView];         // 头部视图
     [self setTitleLabel];       // 标题
@@ -105,24 +105,24 @@
     
 }
 
-#pragma mark ----  添加渐变背景色  -----
-
--(void)setBackgroundColor
-{
-    CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
-    
-    gradientLayer.colors = @[(__bridge id)[UIColor blackColor].CGColor,(__bridge id)[UIColor colorWithRed:125/255.0f green:125/255.0f blue:125/255.0f alpha:1.0f].CGColor];
-    
-    //位置x,y    自己根据需求进行设置   使其从不同位置进行渐变
-    
-    gradientLayer.startPoint = CGPointMake(0, 1);
-    
-    gradientLayer.endPoint = CGPointMake(1, 0);
-    
-    gradientLayer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-    
-    [self.view.layer addSublayer:gradientLayer];
-}
+//#pragma mark ----  添加渐变背景色  -----
+//
+//-(void)setBackgroundColor
+//{
+//    CAGradientLayer *gradientLayer = [[CAGradientLayer alloc] init];
+//    
+//    gradientLayer.colors = @[(__bridge id)[UIColor blackColor].CGColor,(__bridge id)[UIColor colorWithRed:125/255.0f green:125/255.0f blue:125/255.0f alpha:1.0f].CGColor];
+//    
+//    //位置x,y    自己根据需求进行设置   使其从不同位置进行渐变
+//    
+//    gradientLayer.startPoint = CGPointMake(0, 1);
+//    
+//    gradientLayer.endPoint = CGPointMake(1, 0);
+//    
+//    gradientLayer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+//    
+//    [self.view.layer addSublayer:gradientLayer];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

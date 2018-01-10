@@ -12,4 +12,15 @@
 
 singlent_for_implementation(YJ_UserManager)
 
+-(id)init{
+
+    self = [super init];
+    
+    if (self == nil) {
+        
+    }
+
+    return self;
+}
+
 @end
